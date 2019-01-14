@@ -1,0 +1,9 @@
+{
+  "name": "static-worker",
+  "version": "0.0.1",
+  "description": "A utility package to ease the building of Cloudflare workers",
+  "main": "index.js",
+  "repository": "https://github.com/manatarms/static-worker",
+  "author": "Sachin Fernandes",
+  "license": "MIT"
+}
