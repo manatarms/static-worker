@@ -13,7 +13,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "build-publish" : "yarn build && yarn publish"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
