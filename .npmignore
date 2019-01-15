@@ -1,0 +1,7 @@
+*.log
+coverage
+__tests__
+webpack.config.js
+jest.config.js
+babel.config.js
+.travis.yml
