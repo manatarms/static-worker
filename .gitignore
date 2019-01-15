@@ -21,4 +21,4 @@ typings/
 .yarn-integrity
 
 # bundle
-dist
+dist/
