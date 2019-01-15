@@ -1,9 +1,21 @@
 {
   "name": "static-worker",
   "version": "0.0.1",
-  "description": "A utility package to ease the building of Cloudflare workers",
+  "description": "A utility package for building Cloudflare workers",
   "main": "index.js",
   "repository": "https://github.com/manatarms/static-worker",
   "author": "Sachin Fernandes",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.28.4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.1"
+  }
 }
