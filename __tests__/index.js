@@ -15,17 +15,17 @@ test("Should build new instance", () => {
 });
 
 test("Should configure route correctly", () => {
-  testWorker.route(/images/, request => {});
+  testWorker.route(/images/, () => {});
   expect(testWorker).toMatchSnapshot();
 });
 
 test("Should get response for route", () => {
-  testWorker.route(/images/, request => new Response("images response"));
+  testWorker.route(/images/, () => new Response("images response"));
   expect(testWorker.getResponse()).toMatchSnapshot();
 });
 
 test("Should return 404 for unregistered routes", () => {
-  testWorker.route(/unregistered/, request => new Response("unregistered"));
+  testWorker.route(/unregistered/, () => new Response());
   expect(testWorker.getResponse()).toMatchSnapshot();
 });
 
@@ -38,7 +38,7 @@ test("Should getAssetNameFromUrl", () => {
 });
 
 test("Should match first registered route", () => {
-  testWorker.route(/images/, request => new Response("images response 1"));
-  testWorker.route(/image/, request => new Response("images response 2"));
+  testWorker.route(/images/, () => new Response("images response 1"));
+  testWorker.route(/image/, () => new Response("images response 2"));
   expect(testWorker.getResponse()).toMatchSnapshot();
 });
