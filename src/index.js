@@ -1,4 +1,4 @@
-class StaticWorker {
+export default class StaticWorker {
   constructor(request) {
     this.request = request;
     this.routes = new Map();
@@ -17,7 +17,7 @@ class StaticWorker {
       }
     }
     if (typeof response === "undefined") {
-      return this.notFound()
+      return this.notFound();
     }
     return response;
   }
@@ -26,8 +26,7 @@ class StaticWorker {
     return this.request.url.split("/").pop();
   }
 
-  notFound(){
+  notFound() {
     return new Response("Not Found", { status: 404 });
   }
 }
-
