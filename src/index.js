@@ -22,7 +22,7 @@ export default class StaticWorker {
     return response;
   }
 
-  getAssetNameFromUrl() {
+  getResourceNameFromUrl() {
     return this.request.url.split("/").pop();
   }
 

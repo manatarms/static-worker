@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should build new instance 1`] = `
+StaticWorker {
+  "request": Body {
+    "_abort": false,
+    "_raw": Array [],
+    "body": "test",
+    "bodyUsed": false,
+    "headers": Headers {
+      "_headers": Object {},
+    },
+    "ok": true,
+    "size": 0,
+    "status": 200,
+    "statusText": "OK",
+    "timeout": 0,
+    "url": "myurl.com/images",
+  },
+  "routes": Map {},
+}
+`;
+
+exports[`Should configure route correctly 1`] = `
+StaticWorker {
+  "request": Body {
+    "_abort": false,
+    "_raw": Array [],
+    "body": "test",
+    "bodyUsed": false,
+    "headers": Headers {
+      "_headers": Object {},
+    },
+    "ok": true,
+    "size": 0,
+    "status": 200,
+    "statusText": "OK",
+    "timeout": 0,
+    "url": "myurl.com/images",
+  },
+  "routes": Map {
+    /images/ => [Function],
+  },
+}
+`;
+
+exports[`Should get response for route 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": "images response",
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": true,
+  "size": 0,
+  "status": 200,
+  "statusText": "OK",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
+
+exports[`Should getAssetNameFromUrl 1`] = `"images"`;
+
+exports[`Should match first registered route 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": "images response 1",
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": true,
+  "size": 0,
+  "status": 200,
+  "statusText": "OK",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
+
+exports[`Should return 404 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": "Not Found",
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
+
+exports[`Should return 404 for unregistered routes 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": "Not Found",
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
