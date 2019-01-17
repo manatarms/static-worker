@@ -7,7 +7,7 @@ module.exports = {
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
+    quotes: ["error", "double", "backtick"],
     semi: ["error", "always"]
   },
   plugins: ["jest"],
