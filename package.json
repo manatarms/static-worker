@@ -8,8 +8,10 @@
     "cloudflare"
   ],
   "main": "dist/index.js",
-  "repository": "https://github.com/manatarms/static-worker",
-  "author": "Sachin Fernandes",
+  "repository": "git@github.com:manatarms/static-worker.git",
+  "bugs": "https://github.com/manatarms/static-worker/issues",
+  "homepage": "https://github.com/manatarms/static-worker#readme",
+  "author": "Sachin Fernandes <fernandes.sachin@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
