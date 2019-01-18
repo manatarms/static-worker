@@ -17,6 +17,7 @@ StaticWorker {
     "timeout": 0,
     "url": "myurl.com/images",
   },
+  "responses": Object {},
   "routes": Map {},
 }
 `;
@@ -38,6 +39,7 @@ StaticWorker {
     "timeout": 0,
     "url": "myurl.com/images",
   },
+  "responses": Object {},
   "routes": Map {
     /images/ => [Function],
   },
@@ -105,6 +107,24 @@ Body {
   "_abort": false,
   "_raw": Array [],
   "body": "Not Found",
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
+
+exports[`Should return custom response 404 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": "Custom 404",
   "bodyUsed": false,
   "headers": Headers {
     "_headers": Object {},

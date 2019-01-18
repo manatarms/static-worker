@@ -33,6 +33,16 @@ test("Should return 404", () => {
   expect(testWorker.notFound()).toMatchSnapshot();
 });
 
+test("Should return custom response 404", () => {
+  const customResponsetestWorker = new StaticWorker(
+    new Response("custom test", {
+      url: "custom.com/test"
+    }),
+    { 404: new Response("Custom 404", { status: 404 }) }
+  );
+  expect(customResponsetestWorker.notFound()).toMatchSnapshot();
+});
+
 test("Should getAssetNameFromUrl", () => {
   expect(testWorker.getResourceNameFromUrl()).toMatchSnapshot();
 });

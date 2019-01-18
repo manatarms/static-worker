@@ -1,6 +1,7 @@
 export default class StaticWorker {
-  constructor(request) {
+  constructor(request, responses = {}) {
     this.request = request;
+    this.responses = responses;
     this.routes = new Map();
   }
 
@@ -27,6 +28,9 @@ export default class StaticWorker {
   }
 
   notFound() {
-    return new Response("Not Found", { status: 404 });
+    return (
+      this.responses["404"] ||
+      new Response("Not Found", { status: 404, statusText: "Not Found" })
+    );
   }
 }
