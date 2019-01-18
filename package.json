@@ -1,6 +1,6 @@
 {
   "name": "static-worker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility package for building Cloudflare workers",
   "keywords": [
     "static",
