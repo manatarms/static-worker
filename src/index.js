@@ -9,7 +9,13 @@ export default class StaticWorker {
     this.routes.set(regex, handler.bind(this, this.request));
   }
 
-  getResponse() {
+  getResponse(statusCode) {
+    if (typeof statusCode !== "undefined") {
+      return (
+        this.responses[statusCode] || new Response(null, { status: statusCode })
+      );
+    }
+
     let response;
     for (let [regex, handler] of this.routes.entries()) {
       if (regex.test(this.request.url)) {
@@ -18,19 +24,12 @@ export default class StaticWorker {
       }
     }
     if (typeof response === "undefined") {
-      return this.notFound();
+      return this.responses["404"];
     }
     return response;
   }
 
   getResourceNameFromUrl() {
     return this.request.url.split("/").pop();
-  }
-
-  notFound() {
-    return (
-      this.responses["404"] ||
-      new Response("Not Found", { status: 404, statusText: "Not Found" })
-    );
   }
 }

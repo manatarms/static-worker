@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1548320398017" clover="3.2.0">
+  <project timestamp="1548320398017" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4" elements="27" coveredelements="27" complexity="0" loc="14" ncloc="14" packages="2" files="2" classes="2">
+      <package name="static-worker">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="jest.setup.js" path="/Users/sachin/cf-repos/static-worker/jest.setup.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="static-worker.src">
+        <metrics statements="14" coveredstatements="14" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4"/>
+        <file name="index.js" path="/Users/sachin/cf-repos/static-worker/src/index.js">
+          <metrics statements="14" coveredstatements="14" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4"/>
+          <line num="3" count="13" type="stmt"/>
+          <line num="4" count="13" type="stmt"/>
+          <line num="5" count="13" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="20" count="5" type="stmt"/>
+          <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="26" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="3" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

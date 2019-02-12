@@ -29,18 +29,37 @@ test("Should return 404 for unregistered routes", () => {
   expect(testWorker.getResponse()).toMatchSnapshot();
 });
 
-test("Should return 404", () => {
-  expect(testWorker.notFound()).toMatchSnapshot();
+test("Should return default 404", () => {
+  expect(testWorker.getResponse()).toMatchSnapshot();
 });
 
-test("Should return custom response 404", () => {
+test("Should return custom 404", () => {
   const customResponsetestWorker = new StaticWorker(
     new Response("custom test", {
       url: "custom.com/test"
     }),
     { 404: new Response("Custom 404", { status: 404 }) }
   );
-  expect(customResponsetestWorker.notFound()).toMatchSnapshot();
+  expect(customResponsetestWorker.getResponse()).toMatchSnapshot();
+});
+
+test("Should return custom status code", () => {
+  const customResponsetestWorker = new StaticWorker(
+    new Response("custom response", {
+      url: "custom.com/response"
+    }),
+    { 301: new Response("Custom 302", { status: 301 }) }
+  );
+  expect(customResponsetestWorker.getResponse("301")).toMatchSnapshot();
+});
+
+test("Should return any response codes", () => {
+  const customResponsetestWorker = new StaticWorker(
+    new Response("any response", {
+      url: "custom.com/any"
+    })
+  );
+  expect(customResponsetestWorker.getResponse("301")).toMatchSnapshot();
 });
 
 test("Should getAssetNameFromUrl", () => {
