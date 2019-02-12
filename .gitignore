@@ -22,3 +22,9 @@ typings/
 
 # bundle
 dist/
+
+# Coverage
+coverage/
+
+# TODO file
+TODO
