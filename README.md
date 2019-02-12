@@ -4,7 +4,7 @@
 This package provides functions that make it easy to host a static website using CLoudflare workers.
 
 Here's a simple example
-```
+```javascript
 import StaticWorker from "static-worker";
 
 const worker = new StaticWorker(request);
