@@ -84,7 +84,23 @@ Body {
 }
 `;
 
-exports[`Should return 404 for unregistered routes 1`] = `undefined`;
+exports[`Should return 404 for unregistered routes 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": null,
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "url": undefined,
+}
+`;
 
 exports[`Should return any response codes 1`] = `
 Body {
@@ -140,4 +156,20 @@ Body {
 }
 `;
 
-exports[`Should return default 404 1`] = `undefined`;
+exports[`Should return default 404 1`] = `
+Body {
+  "_abort": false,
+  "_raw": Array [],
+  "body": null,
+  "bodyUsed": false,
+  "headers": Headers {
+    "_headers": Object {},
+  },
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "url": undefined,
+}
+`;

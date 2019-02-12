@@ -24,7 +24,7 @@ export default class StaticWorker {
       }
     }
     if (typeof response === "undefined") {
-      return this.responses["404"];
+      return this.getResponse(404);
     }
     return response;
   }
